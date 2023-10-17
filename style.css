@@ -1,0 +1,171 @@
+* {
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-image: linear-gradient(270deg,
+            hsl(22deg 43% 88%) 0%,
+            hsl(22deg 43% 86%) 6%,
+            hsl(22deg 44% 85%) 13%,
+            hsl(22deg 44% 83%) 19%,
+            hsl(22deg 44% 82%) 25%,
+            hsl(22deg 44% 80%) 31%,
+            hsl(22deg 44% 79%) 37%,
+            hsl(22deg 44% 77%) 44%,
+            hsl(22deg 44% 76%) 50%,
+            hsl(22deg 44% 75%) 56%,
+            hsl(22deg 44% 73%) 63%,
+            hsl(21deg 44% 72%) 69%,
+            hsl(21deg 43% 70%) 75%,
+            hsl(21deg 43% 69%) 81%,
+            hsl(21deg 43% 67%) 87%,
+            hsl(21deg 43% 66%) 94%,
+            hsl(21deg 43% 65%) 100%);
+}
+
+/* ========================HEADER======================== */
+/* ---logo */
+.logo {
+    display: flex;
+    align-items: end;
+    gap: 1rem;
+}
+
+.camera-icon {
+    width: 3vw;
+}
+
+.title {
+    font-size: 3.5vw;
+}
+
+/* ---input */
+.input-container {
+    position: relative;
+}
+
+.cross-icon,
+.search-icon {
+    width: 22px;
+    position: absolute;
+    right: 1rem;
+    bottom: .6rem;
+    cursor: pointer;
+    display: block;
+}
+
+.display-none {
+    display: none;
+}
+
+.search-input {
+    width: 20vw;
+    height: 2.5rem;
+    padding-left: 1rem;
+    outline: none;
+    border: 5px double #AA8254;
+    border-radius: 0.5rem;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px;
+    color: #AA8254;
+    background: #E2C3B2;
+}
+
+::placeholder {
+    color: #faeee6;
+}
+
+/* ---line */
+.header-line {
+    height: 5px;
+    background-color: #AA8254;
+    margin: 1rem;
+}
+
+/* ========================MAIN======================== */
+.gallery-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2vw;
+    gap: 2vw;
+
+}
+
+.image {
+    width: 30vw;
+    height: 30vw;
+    background-size: cover;
+    background-position: center;
+    border-radius: 3%;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+/* ========================FOOTER======================== */
+.logo-and-search,
+footer {
+    width: 100%;
+    padding-left: 3vw;
+    padding-right: 4vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #F0E3DB;
+    text-shadow: 1px 0 1px #000,
+        0 1px 1px #000,
+        -1px 0 1px #AA8254,
+        0 -1px 1px #AA8254;
+}
+
+.rss {
+    width: 8vw;
+}
+
+.year {
+    font-size: 1.3vw;
+}
+
+.github {
+    width: 3vw;
+}
+
+/* ========================INTERACTIVITY======================== */
+.cross-icon,
+.search-icon,
+.image,
+.year,
+.github {
+    transition: transform .5s;
+}
+
+.cross-icon:hover,
+.search-icon:hover,
+.image:hover,
+.year:hover,
+.github:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.cross-icon:active,
+.search-icon:active,
+.image:active,
+.year:active,
+.github:active {
+    filter: drop-shadow(3px 0px 1px rgb(65, 63, 63));
+}
+
+/* ========================ADAPTIVITY======================== */
+@media (max-width: 1000px) {
+    .image {
+        width: 500px;
+        height: 500px;
+        margin: 0 auto;
+    }
+}
